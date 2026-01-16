@@ -1,18 +1,35 @@
 {
     "configurations": [
         {
-            "name": "Win32",
+            "name": "Emscripten",
             "includePath": [
                 "${workspaceFolder}/**",
-                "C:/Users/pc/vcpkg/installed/x64-windows/include"
+                "C:/Users/pc/emsdk/upstream/emscripten/system/include",
+                "C:/Users/pc/emsdk/upstream/emscripten/system/include/libc++",
+                "C:/Users/pc/emsdk/upstream/emscripten/system/include/libc++/v1",
+                "C:/Users/pc/emsdk/upstream/emscripten/system/include/compat",
+                "C:/Users/pc/emsdk/upstream/emscripten/cache/sysroot/include",
+                "C:/Users/pc/emsdk/upstream/emscripten/cache/sysroot/include/wasm32-emscripten/c++/v1",
+                "C:/Users/pc/emsdk/upstream/emscripten/cache/sysroot/include/wasm32-emscripten",
+                "C:/Users/pc/emsdk/upstream/emscripten/cache/sysroot/include/wasm32-emscripten/libc"
             ],
             "defines": [
-                "JSON_USE_IMPLICIT_CONVERSIONS=1"
+                "JSON_USE_IMPLICIT_CONVERSIONS=1",
+                "EMSCRIPTEN=1"
             ],
-            "compilerPath": "C:/MinGW/bin/g++.exe",
+            "compilerPath": "C:/Users/pc/emsdk/upstream/bin/clang++.exe",
             "cStandard": "c17",
-            "cppStandard": "c++14",
-            "intelliSenseMode": "windows-gcc-x64"
+            "cppStandard": "c++17",
+            "intelliSenseMode": "clang-x64",
+            "browse": {
+                "path": [
+                    "${workspaceFolder}/**",
+                    "C:/Users/pc/emsdk/upstream/emscripten/system/include",
+                    "C:/Users/pc/emsdk/upstream/emscripten/cache/sysroot/include",
+                    "C:/Users/pc/emsdk/upstream/emscripten/cache/sysroot/include/wasm32-emscripten/c++/v1"
+                ],
+                "limitSymbolsToIncludedHeaders": true
+            }
         }
     ],
     "version": 4

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Pathfinding Algorithms</title>
+    <style>
+        body { margin: 0; padding: 20px; font-family: Arial; background: #f0f0f0; }
+        #controls {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .control-group {
+            margin-bottom: 10px;
+        }
+        select, button {
+            padding: 8px 15px;
+            margin-right: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 14px;
+        }
+        button {
+            background: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #45a049;
+        }
+        button#resetBtn {
+            background: #f44336;
+        }
+        button#resetBtn:hover {
+            background: #d32f2f;
+        }
+        canvas {
+            border: 2px solid #333;
+            background: white;
+            display: block;
+        }
+        .instructions {
+            margin-top: 10px;
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div id="controls">
+        <div class="control-group">
+            <select id="algorithmSelect">
+                <option value="astar">A* Algorithm</option>
+                <option value="dijkstra">Dijkstra</option>
+                <option value="bfs">BFS</option>
+            </select>
+            
+            <button id="runBtn">Run Pathfinding</button>
+            <button id="resetBtn">Reset Obstacles</button>
+        </div>
+        
+        <div class="instructions">
+            <strong>Instructions:</strong><br>
+            • Green: Start | Blue: End | Red: Path
+        </div>
+    </div>
+    
+    <canvas id="gridCanvas"></canvas>
+    
+    <script src="pathfinder.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
